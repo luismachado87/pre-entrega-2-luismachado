@@ -15,11 +15,11 @@ const SingleProduct = ({ prod }) => {
         <Card.Body>
           <Card.Title>{prod.name}</Card.Title>
           <Card.Subtitle style={{ paddingBottom: 10 }}>
-            <span>₹ {prod.price.split(".")[0]}</span>
+            <span>$ {prod.price.split(".")[0]}</span>
             {prod.fastDelivery ? (
               <div>Fast Delivery</div>
             ) : (
-              <div>4 days delivery</div>
+              <div>4 dias delivery</div>
             )}
             <Rating rating={prod.ratings} />
           </Card.Subtitle>
@@ -33,7 +33,7 @@ const SingleProduct = ({ prod }) => {
                 })
               }
             >
-              Remove from Cart
+              REMOVER DEL CARRO
             </Button>
           ) : (
             <Button

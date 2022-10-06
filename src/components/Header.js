@@ -24,14 +24,14 @@ const Header = () => {
     <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
       <Container>
         <Navbar.Brand>
-          <Link to="/">Shopping Cart</Link>
+          <Link to="/">CoderShop</Link>
         </Navbar.Brand>
         {useLocation().pathname.split("/")[1] !== "cart" && (
           <Navbar.Text className="search">
             <FormControl
               style={{ width: 500 }}
               type="search"
-              placeholder="Search a product..."
+              placeholder="buscar un producto..."
               className="m-auto"
               aria-label="Search"
               onChange={(e) => {
@@ -62,14 +62,14 @@ const Header = () => {
                       />
                       <div className="cartItemDetail">
                         <span>{prod.name}</span>
-                        <span>₹ {prod.price.split(".")[0]}</span>
+                        <span>$ {prod.price.split(".")[0]}</span>
                       </div>
                       <AiFillDelete
                         fontSize="20px"
                         style={{ cursor: "pointer" }}
                         onClick={() =>
                           dispatch({
-                            type: "REMOVE_FROM_CART",
+                            type: "REMOVER DEL CARRO",
                             payload: prod,
                           })
                         }
@@ -83,7 +83,7 @@ const Header = () => {
                   </Link>
                 </>
               ) : (
-                <span style={{ padding: 10 }}>Cart is Empty!</span>
+                <span style={{ padding: 10 }}>El carro esta vacio!</span>
               )}
             </Dropdown.Menu>
           </Dropdown>
